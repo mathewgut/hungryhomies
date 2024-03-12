@@ -1,6 +1,7 @@
 # model definitions for datebase
 from django.db import models
 from django.utils import timezone
+
 # Create your models here.
 class Post(models.Model):
     account = None
@@ -9,4 +10,5 @@ class Post(models.Model):
     location = models.CharField(max_length=200)
     meetup_time = models.DateTimeField("Meet up time")
     date = timezone.localtime()
-
+    def __str__(self):
+        return self.title

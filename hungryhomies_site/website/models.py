@@ -7,7 +7,7 @@ from django.contrib.auth.models import AbstractUser
 # Create your models here.
 
 class CustomUser(AbstractUser):
-    user_birthday = models.DateTimeField()
+    user_birthday = models.DateTimeField(default=timezone.now())
     user_program = models.CharField(max_length=50)
     user_program = models.CharField(max_length=50)
     user_bio = models.CharField(max_length=250)
@@ -18,11 +18,11 @@ class CustomUser(AbstractUser):
     #event_posts stuff
 
 class Post(models.Model):
-    #account = models.ForeignKey(CustomUser, on_delete=models.CASCADE) #realtionship explain post know who they belong to, but users don't know what posts they have
+    account = models.ForeignKey(CustomUser, on_delete=models.CASCADE) #realtionship explain post know who they belong to, but users don't know what posts they have
     title = models.CharField(max_length=250)
     description = models.CharField(max_length=750)
     ocation = models.CharField(max_length=200)
     meetup_time = models.DateTimeField("Meet up time")
     date = timezone.localtime()
     def __str__(self):
-        return self.title
+       return self.title

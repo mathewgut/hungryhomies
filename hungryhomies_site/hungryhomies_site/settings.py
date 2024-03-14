@@ -57,7 +57,7 @@ ROOT_URLCONF = 'hungryhomies_site.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'reactapp/build')],
+        'DIRS': [os.path.join(BASE_DIR,'reactappv3/build')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -121,7 +121,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,'reactapp/build/static')
+    os.path.join(BASE_DIR,'reactappv3/build/static')
 ]
 
 # Default primary key field type

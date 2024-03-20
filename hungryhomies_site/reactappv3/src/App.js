@@ -25,7 +25,7 @@ function App() {
           <div className="p-2">
             <div className="flex justify-between">
               <h5 className="mb-2 text-sm font-bold leading-tight text-neutral-800 dark:text-neutral-50">
-                Caf Meal Swipe
+                This is a test
               </h5>
               <h5 className="mb-2 text-sm font-bold leading-tight text-neutral-800 dark:text-neutral-50 flex">
                 On Campus 

@@ -3,7 +3,16 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App">    
+        <nav style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 20px', margin: '10%'}}className="NavBar">
+        <div class="logo"><img style={{ width: '75px', height: '75px', lineHeight: '75px' }} src="hungryhomies-logo.png" alt="Logo" /></div>
+        <ul style={{ listStyleType: 'none', margin: 0, padding: 0, display: 'flex' }} class="nav-links">
+          <li><a href="#">Create a Post</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Log Out</a></li>
+        </ul>
+        </nav>
       <div className="flex flex-col space-y-8 min-w-screen h-screen animated fadeIn faster fixed left-0 top-0 flex justify-center items-center inset-0 z-50 outline-none focus:outline-none bg-gray-300">
         <div className="block rounded-lg bg-white w-72 mt-32">
           <div className="relative overflow-hidden bg-cover bg-no-repeat" data-te-ripple-init data-te-ripple-color="light">
@@ -38,6 +47,21 @@ function App() {
           </div>
         </div>
       </div>
+      <footer style={{ padding: '20px 0', textAlign: 'center', position: 'fixed', bottom: 0, width: '100%'}} className="footer">
+        <div>
+          <a href="#" style={{ textDecoration: 'none', margin: '0 10px' }}>Contact Us</a>
+          {/* social media icons */}
+          <a href="#"><img src="facebook-icon.png" alt="Facebook" /></a>
+          <a href="#"><img src="twitter-icon.png" alt="Twitter" /></a>
+          <a href="#"><img src="instagram-icon.png" alt="Instagram" /></a>
+          <a href="#"><img src="linkedin-icon.png" alt="LinkedIn" /></a>
+        </div>
+        <div>
+          <a href="#" style={{ textDecoration: 'none' }}>Privacy Policy</a>
+          <a href="#" style={{ textDecoration: 'none' }}>Terms of Service</a>
+          <a href="#" style={{ textDecoration: 'none' }}>Security Policy</a>
+        </div>
+      </footer>
     </div>
   );
 }

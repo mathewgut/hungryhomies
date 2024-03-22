@@ -3,29 +3,26 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">    
-        <nav style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 20px', margin: '10%'}}className="NavBar">
-        <div class="logo"><img style={{ width: '75px', height: '75px', lineHeight: '75px' }} src="hungryhomies-logo.png" alt="Logo" /></div>
-        <ul style={{ listStyleType: 'none', margin: 0, padding: 0, display: 'flex' }} class="nav-links">
-          <li><a href="#">Create a Post</a></li>
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">Settings</a></li>
-          <li><a href="#">Log Out</a></li>
-        </ul>
-        </nav>
-      <div className="flex flex-col space-y-8 min-w-screen h-screen animated fadeIn faster fixed left-0 top-0 flex justify-center items-center inset-0 z-50 outline-none focus:outline-none bg-gray-300">
-        <div className="block rounded-lg bg-white w-72 mt-32">
-          <div className="relative overflow-hidden bg-cover bg-no-repeat" data-te-ripple-init data-te-ripple-color="light">
-            <img className="rounded-lg sm:m-h-64 md:h-64 w-full" src="https://charlatan.ca/wp-content/uploads/2019/01/nCAFfood20_48_GrahamSwaney_WEB.jpg" alt="food" />
-            <a href="#!">
-              <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
-            </a>
-          </div>
+    <div className="App"> 
 
+      //nav bar
+      <nav style={{lineHeight: 5, position: 'fixed', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 20px', zIndex: 999}}className="NavBar">
+        <div className="logo"><img style={{ display:'flex', left: 0, width: '75px', height: '75px', lineHeight: '75px' }} src="hungryhomies-logo.png" alt="Logo" /></div>
+        <div className="right-0 hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700">
+            <li><a href="#" className="block py-2 px-3 text-white bg-#f8fafc md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Create a Post</a></li>
+            <li><a href="#" className="block py-2 px-3 text-white bg-#f8fafc md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Profile</a></li>
+            <li><a href="#" className="block py-2 px-3 text-white bg-#f8fafc md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Settings</a></li>
+            <li><a href="#" className="block py-2 px-3 text-white bg-#f8fafc md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Log Out</a></li>
+          </ul>
+        </div>
+      </nav>
+
+          //posting
           <div className="p-2">
             <div className="flex justify-between">
               <h5 className="mb-2 text-sm font-bold leading-tight text-neutral-800 dark:text-neutral-50">
-                This is a test
+                Caf Meal Swipe
               </h5>
               <h5 className="mb-2 text-sm font-bold leading-tight text-neutral-800 dark:text-neutral-50 flex">
                 On Campus 
@@ -45,25 +42,35 @@ function App() {
               View more
             </button>
           </div>
-        </div>
-      </div>
-      <footer style={{ padding: '20px 0', textAlign: 'center', position: 'fixed', bottom: 0, width: '100%'}} className="footer">
-        <div>
-          <a href="#" style={{ textDecoration: 'none', margin: '0 10px' }}>Contact Us</a>
-          {/* social media icons */}
-          <a href="#"><img src="facebook-icon.png" alt="Facebook" /></a>
-          <a href="#"><img src="twitter-icon.png" alt="Twitter" /></a>
-          <a href="#"><img src="instagram-icon.png" alt="Instagram" /></a>
-          <a href="#"><img src="linkedin-icon.png" alt="LinkedIn" /></a>
-        </div>
-        <div>
-          <a href="#" style={{ textDecoration: 'none' }}>Privacy Policy</a>
-          <a href="#" style={{ textDecoration: 'none' }}>Terms of Service</a>
-          <a href="#" style={{ textDecoration: 'none' }}>Security Policy</a>
-        </div>
-      </footer>
+
+          //posting button
+          <div class="fixed bottom-0 right-0 w-16 h-16 mr-12 mb-8 cursor-pointer" id="box_btn">
+            <a href="#"><img src="#"></img></a> 
+          </div>
+
+          //footer
+          <footer className="fixed bottom-0 w-full shadow-md z-50">
+            <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+              <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://hungryhomies.club/" class="hover:underline">HungryHomies</a>. All Rights Reserved.
+            </span>
+            <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">About</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline">Contact</a>
+                </li>
+            </ul>
+            </div>
+        </footer>
     </div>
-  );
+  )
 }
 
 export default App;

@@ -1,6 +1,9 @@
-name: Pylint
+name: test_cases
 
-on: [push]
+on:
+  pull_request:
+    branches: [ main ]
+    types: [opened, reopened]
 
 jobs:
   build:
@@ -17,8 +20,8 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pylint
         pip install django
-    - name: Analysing the code with pylint
+    - name: Analysing the code with super awesome test case
       run: |
-        pylint $(git ls-files '*.py')
+        cd src
+        python manage.py test

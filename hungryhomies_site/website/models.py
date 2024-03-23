@@ -14,8 +14,6 @@ class CustomUser(AbstractUser):
     user_fav_food = models.CharField(max_length=100)
     user_cmfrt_food = models.CharField(max_length=100)
 
-    #event_posts stuff
-
 class Post(models.Model):
     account = models.ForeignKey(CustomUser, on_delete=models.CASCADE) #realtionship explain post know who they belong to, but users don't know what posts they have
     title = models.CharField(max_length=250)

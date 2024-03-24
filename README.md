@@ -5,7 +5,7 @@
 **Application Description:** Hungry Homies is a web app solution to combating food insecurity within Carleton University. Where students are able to sign in/sign up, create meal sharing postings, and connect with other students through messaging in order to meet up for said meal sharing.
 
 **Current State of Application:**
-![image](https://github.com/mathewgut/hungryhomies/assets/54915426/65f47f89-8f40-4410-9113-eebab3be44ef)
+![image](https://github.com/mathewgut/hungryhomies/assets/54915426/c245157d-fa40-4305-8531-0e3be50c3c98)
 
 **List of Features:**
 
